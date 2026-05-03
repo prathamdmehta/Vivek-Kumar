@@ -24,8 +24,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, '..', '.env') })
 
 const UPLOADS_DIR = path.join(__dirname, '..', 'uploads')
-const PUBLIC_HOME = path.join(__dirname, '..', '..', 'public', 'home')
-const PUBLIC_ROOT = path.join(__dirname, '..', '..', 'public')
+const PUBLIC_HOME = path.join(__dirname, '..', '..', '..', 'frontend', 'public', 'home')
+const PUBLIC_ROOT = path.join(__dirname, '..', '..', '..', 'frontend', 'public')
 
 const { default: Media } = await import('../models/Media.js')
 

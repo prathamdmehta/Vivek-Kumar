@@ -1,7 +1,8 @@
 import React from 'react'
 
 const OptimizedImage = ({ src, alt, className, ...props }) => {
-  const webpSrc = src?.includes('?') ? `${src}&fm=webp` : `${src}?fm=webp`
+  if (!src) return null
+  const webpSrc = src.includes('?') ? `${src}&fm=webp` : `${src}?fm=webp`
 
   return (
     <picture>

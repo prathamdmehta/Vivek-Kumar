@@ -127,7 +127,7 @@ export const deleteMedia = async (req, res, next) => {
 /** POST /api/admin/media/seed — seed existing public/home files into DB */
 export const seedMediaFromPublic = async (req, res, next) => {
   try {
-    const publicDir = path.join(__dirname, '..', '..', 'public', 'home')
+    const publicDir = path.join(__dirname, '..', '..', '..', 'frontend', 'public', 'home')
     if (!fs.existsSync(publicDir)) {
       return res.status(404).json({ success: false, message: 'public/home directory not found.' })
     }
